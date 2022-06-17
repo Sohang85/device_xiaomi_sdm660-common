@@ -1,0 +1,11 @@
+allow init proc:file { setattr };
+allow init sysfs:file { open  write };
+
+# SELinux Switch
+allow init su:process { noatsecure  rlimitinh  siginh  transition };
+
+# Boost
+allow init vendor_file:file { execute execute_no_trans };
+
+# USB Fastcharger
+allow init sysfs_fcharge:file { write };

@@ -1,0 +1,4 @@
+allow logpersist logpersist:capability { dac_override  dac_read_search };
+allow logpersist cache_file:dir { open  read };
+allow logpersist media_rw_data_file:dir { add_name  open  read  write };
+allow logpersist media_rw_data_file:file { append  create  ioctl };
